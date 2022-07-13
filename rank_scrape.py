@@ -39,7 +39,12 @@ class rank_scraper:
                     "18":"THE GLOBAL ELITE",}
 
         # Initializing the chromedriver:
-        
+        self.OPTIONS = Options()
+        self.OPTIONS.add_argument('disable-blink-features=AutomationControlled')
+        self.OPTIONS.add_argument(f'user-agent={UserAgent().random}')
+        self.OPTIONS.headless = True
+
+        self.DRIVER = webdriver.Chrome(self.config_driver(),options=self.OPTIONS)
 
     def config_driver(self):
         
@@ -77,16 +82,9 @@ class rank_scraper:
         AVATAR = ''
         RANKS = []
 
-        OPTIONS = Options()
-        OPTIONS.add_argument('disable-blink-features=AutomationControlled')
-        OPTIONS.add_argument(f'user-agent={UserAgent().random}')
-        OPTIONS.headless = True
-
-        DRIVER = webdriver.Chrome(self.config_driver(),options=OPTIONS)
-
-        DRIVER.get(f"https://csgostats.gg/player/{ID}")
+        self.DRIVER.get(f"https://csgostats.gg/player/{ID}")
         
-        for src in DRIVER.find_elements(By.CSS_SELECTOR,'img'):
+        for src in self.DRIVER.find_elements(By.CSS_SELECTOR,'img'):
 
             if AVATAR and len(RANKS) == 2:
                 break
@@ -102,7 +100,7 @@ class rank_scraper:
                     else:
                         RANKS.append(src.get_attribute('src'))
 
-        DRIVER.close()
+        self.DRIVER.close()
 
         if self.MODE == 1:
             AVATAR = None
