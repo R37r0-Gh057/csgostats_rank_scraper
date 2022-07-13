@@ -152,7 +152,7 @@ class rank_scraper:
         elif len(RANKS) == 1:
             CURRENT_RANK, BEST_RANK = RANKS[0], RANKS[0]
         else:   # Image with "UNRANKED" text.
-            CURRENT_RANK, BEST_RANK = 'https://github.com/R37r0-Gh057/csgostats_rank_scraper/raw/main/unknown.png', 'https://github.com/R37r0-Gh057/csgostats_rank_scraper/raw/main/unknown.png'
+            CURRENT_RANK = BEST_RANK = 'https://github.com/R37r0-Gh057/csgostats_rank_scraper/raw/main/unknown.png'
 
         if self.MODE == 1:
             if "unknown.png" in CURRENT_RANK:
