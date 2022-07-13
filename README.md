@@ -18,7 +18,7 @@ The script can be used in two ways:
   * You can just get the current and best ranks information in plain-text for local usage.
  
 # Setup:
-* Install the selenium library: `pip install selenium`
+* Install the required libs: `pip install -r requirements.txt`
 * Download the suitable chromedriver according to your chrome browser version from [here](https://chromedriver.chromium.org/downloads)
 
 # Usage:
