@@ -13,7 +13,7 @@ This script is made in python, which uses the selenium webdriver to scrape a pla
 
 The script can be used in two ways:
   * You can get a player's Steam profile name, current rank icon URL, best rank icon URL for using in your discord/TG/etc bots.
-  <center>**OR**</center>
+<p style="text-align": center;>OR</p>
   * You can just get the current and best ranks information in plain-text for local usage.
  
 # Setup:
