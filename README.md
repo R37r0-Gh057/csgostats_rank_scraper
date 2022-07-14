@@ -19,7 +19,7 @@ The script can be used in two ways:
  
 # Setup:
 * Install the required libs: `pip install -r requirements.txt`
-* Download the suitable webdriver according to your browser and version from [here](https://chromedriver.chromium.org/downloads).
+* Download the suitable webdriver according to your browser and version.
 * Write the full path to the webdriver binary in `driver_path.txt`.
 
 # Usage:
