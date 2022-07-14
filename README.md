@@ -20,10 +20,9 @@ The script can be used in two ways:
 # Setup:
 * Install the required libs: `pip install -r requirements.txt`
 * Download the suitable chromedriver according to your chrome browser version from [here](https://chromedriver.chromium.org/downloads).
-* Write the full path to the webdriver in `driver_path.txt`.
+* Write the full path to the webdriver binary in `driver_path.txt`.
 
 # Usage:
-* Run the script once to enter the path to your driver, or manually change the path in `driver_path.txt`.
 * To run: `python rank_scrape.py`
 
 # How to load as module:
