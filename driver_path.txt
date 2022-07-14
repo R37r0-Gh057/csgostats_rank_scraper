@@ -1,1 +1,1 @@
-path/to/your/chromedriver.exe
+path/to/your/webdriver_binary
